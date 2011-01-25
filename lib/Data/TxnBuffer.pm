@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use parent 'Data::TxnBuffer::Base';
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 our $BACKEND;
 unless ($ENV{PERL_ONLY}) {
@@ -99,6 +99,10 @@ Return buffer read cursor point. This value increase by C<read> methods automati
 =head2 $buf->data
 
 Return buffer's whole data.
+
+=head2 $buf->length
+
+Return buffer's data length. (bytes)
 
 =head1 BASIC METHODS
 
